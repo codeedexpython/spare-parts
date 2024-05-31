@@ -1,10 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 from django.core.validators import RegexValidator
+from django.contrib.auth.models import User
 from django.utils import timezone
     
 
-class User(AbstractBaseUser):
+class UserModel(AbstractBaseUser):
     name = models.CharField(max_length=100)
     mobile_number = models.CharField(
         max_length=10,
